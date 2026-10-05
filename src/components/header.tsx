@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -14,7 +15,7 @@ export function Header() {
       <div className="announcement"><span>Mexican food in Whittier</span><a href={business.phones[0].href}>{business.phones[0].display}</a></div>
       <div className="nav-wrap">
         <Link href="/" className="wordmark" aria-label="El Toro Loco home" onClick={() => setOpen(false)}>
-          <span className="wordmark-mark">ETL</span>
+          <Image className="wordmark-logo" src="/images/logo.png" alt="El Toro Loco logo" width={52} height={52} priority />
           <span><strong>El Toro Loco</strong><small>Mexican Restaurant</small></span>
         </Link>
         <nav className="desktop-nav" aria-label="Main navigation">
