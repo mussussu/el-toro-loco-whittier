@@ -94,6 +94,8 @@ export const menuItems: MenuItem[] = [
   { name: "Charolas de Carnitas", englishName: "Carnitas Trays", category: "Para Fiestas", formats: [], price: null, featured: false, available: true },
   { name: "Barbacoa para Fiestas", englishName: "Barbacoa for Parties", category: "Para Fiestas", formats: [], price: null, featured: false, available: true },
   { name: "Charolas de Ceviche de Pescado", englishName: "Fish Ceviche Trays", category: "Para Fiestas", formats: [], price: null, featured: false, available: true },
+  { name: "Paquetes Familiares", englishName: "Family Packages", category: "Para Fiestas", formats: [], price: null, featured: false, available: true },
+  { name: "Taquizas", category: "Para Fiestas", formats: [], price: null, featured: false, available: true },
 ];
 
 export const menuCategories = ["Carnes", "Tradicionales", "Tamales", "Platillos", "Acompañamientos"] as const;

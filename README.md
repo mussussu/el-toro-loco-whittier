@@ -1,6 +1,6 @@
 # El Toro Loco — Whittier
 
-Production-ready marketing website for El Toro Loco, a Mexican restaurant at 13345 Telegraph Rd #D in Whittier, California. The site is mobile-first and focuses on menu discovery, calls, directions, real restaurant visuals, party orders, and local search visibility.
+Production-ready marketing website for El Toro Loco Family Restaurant, a Mexican restaurant at 14223 Leffingwell Rd in Whittier, California 90604. The site is mobile-first and focuses on menu discovery, calls, directions, real restaurant visuals, party orders, and local search visibility.
 
 ## Local development
 

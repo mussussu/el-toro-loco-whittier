@@ -7,11 +7,11 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(business.domain),
-  title: { default: "El Toro Loco | Mexican Restaurant in Whittier, CA", template: "%s | El Toro Loco" },
-  description: "El Toro Loco is a Mexican restaurant in Whittier serving carnitas, menudo, barbacoa, birria de chivo, tamales, carne asada and handmade tortillas. Visit us on Telegraph Rd.",
+  title: { default: "El Toro Loco Family Restaurant | Whittier, CA", template: "%s | El Toro Loco Family Restaurant" },
+  description: "El Toro Loco Family Restaurant serves carnitas, menudo, barbacoa, birria de chivo, tamales, carne asada and handmade tortillas in Whittier. Visit us at 14223 Leffingwell Rd.",
   alternates: { canonical: "/" },
-  openGraph: { title: "El Toro Loco | Mexican Restaurant in Whittier, CA", description: business.description, url: "/", siteName: business.name, type: "website", locale: "en_US", images: [{ url: "/images/storefront.png", width: 1448, height: 1086, alt: "El Toro Loco storefront in Whittier" }] },
-  twitter: { card: "summary_large_image", title: "El Toro Loco | Mexican Restaurant in Whittier, CA", description: business.description, images: ["/images/storefront.png"] },
+  openGraph: { title: "El Toro Loco Family Restaurant | Whittier, CA", description: business.description, url: "/", siteName: business.name, type: "website", locale: "en_US", images: [{ url: "/images/storefront.png", width: 1448, height: 1086, alt: "El Toro Loco Family Restaurant storefront in Whittier" }] },
+  twitter: { card: "summary_large_image", title: "El Toro Loco Family Restaurant | Whittier, CA", description: business.description, images: ["/images/storefront.png"] },
   robots: { index: true, follow: true },
 };
 

@@ -7,7 +7,7 @@ import { pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata(
   "Menu",
-  "Explore the El Toro Loco menu and current prices for carnitas, menudo, barbacoa, birria de chivo, tamales, traditional plates, and handmade tortillas in Whittier.",
+  "Explore the El Toro Loco Family Restaurant menu and current prices for carnitas, menudo, barbacoa, birria de chivo, tamales, traditional plates, and handmade tortillas in Whittier.",
   "/menu",
 );
 

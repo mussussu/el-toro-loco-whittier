@@ -14,9 +14,9 @@ export function Header() {
     <header className="site-header">
       <div className="announcement"><span>Mexican food in Whittier</span><a href={business.phones[0].href}>{business.phones[0].display}</a></div>
       <div className="nav-wrap">
-        <Link href="/" className="wordmark" aria-label="El Toro Loco home" onClick={() => setOpen(false)}>
+        <Link href="/" className="wordmark" aria-label="El Toro Loco Family Restaurant home" onClick={() => setOpen(false)}>
           <Image className="wordmark-logo" src="/images/logo.png" alt="El Toro Loco logo" width={52} height={52} priority />
-          <span><strong>El Toro Loco</strong><small>Mexican Restaurant</small></span>
+          <span><strong>El Toro Loco</strong><small>Family Restaurant</small></span>
         </Link>
         <nav className="desktop-nav" aria-label="Main navigation">
           {navItems.map((item) => <Link key={item.href} href={item.href} className={pathname === item.href ? "active" : ""}>{item.label}</Link>)}
