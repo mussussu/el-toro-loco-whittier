@@ -5,12 +5,12 @@ import { ArrowIcon, MapIcon, PhoneIcon } from "@/components/icons";
 import { business } from "@/data/business";
 
 const specialties = [
-  ["Carnitas", "Tender pork served in the formats listed on our restaurant menu."],
-  ["Menudo", "A traditional favorite and a popular choice for party orders."],
-  ["Barbacoa de Res", "Beef barbacoa offered in tacos, burritos, quesadillas, plates, and by the pound."],
-  ["Birria de Chivo", "Goat birria offered in tacos, burritos, quesadillas, plates, and by the pound."],
-  ["Tamales", "Elote, pollo, and puerco varieties listed on our menu."],
-  ["Tortillas Hechas a Mano", "Handmade tortillas—the perfect companion to a traditional meal."],
+  { name: "Carnitas", description: "Tender pork served in the formats listed on our restaurant menu.", image: "/images/flavors/carnitas.webp", imageAlt: "Traditional carnitas served with tortillas and salsa" },
+  { name: "Menudo", description: "A traditional favorite and a popular choice for party orders.", image: "/images/flavors/menudo.webp", imageAlt: "Steaming bowl of menudo with lime and cilantro" },
+  { name: "Barbacoa de Res", description: "Beef barbacoa offered in tacos, burritos, quesadillas, plates, and by the pound.", image: "/images/flavors/barbacoa-de-res.webp", imageAlt: "Barbacoa de res served in consommé with tortillas" },
+  { name: "Birria de Chivo", description: "Goat birria offered in tacos, burritos, quesadillas, plates, and by the pound.", image: "/images/flavors/birria-de-chivo.webp", imageAlt: "Birria de chivo served in a traditional clay bowl" },
+  { name: "Tamales", description: "Elote, pollo, and puerco varieties listed on our menu.", image: "/images/flavors/tamales.webp", imageAlt: "Red and green tamales opened to show their fillings" },
+  { name: "Tortillas Hechas a Mano", description: "Handmade tortillas—the perfect companion to a traditional meal.", image: "/images/flavors/tortillas-hechas-a-mano.webp", imageAlt: "Stack of handmade corn tortillas" },
 ] as const;
 
 const previewItems = [
@@ -30,7 +30,7 @@ export default function Home() {
       <div className="container hero-content"><div className="hero-kicker">Whittier, California</div><h1>El Toro Loco<span>Authentic Mexican Food in Whittier</span></h1><p className="hero-copy">Carnitas • Menudo • Barbacoa • Birria • Tamales • Handmade Tortillas</p><div className="button-row hero-actions"><ButtonLink href="/menu" variant="secondary">View Menu <ArrowIcon className="icon" /></ButtonLink><ButtonLink href={business.phones[0].href} variant="light"><PhoneIcon className="icon" /> Call Now</ButtonLink><ButtonLink href={business.directionsUrl} external variant="outline"><MapIcon className="icon" /> Get Directions</ButtonLink></div></div>
     </section>
 
-    <section className="section"><div className="container"><div className="section-heading"><div><p className="eyebrow">Local favorites</p><h2>Bold, Traditional Flavors</h2></div><p className="lead">Explore the dishes that bring people to El Toro Loco—from carnitas and barbacoa to weekend favorites and handmade tortillas.</p></div><div className="specialty-grid">{specialties.map(([name, description], index) => <article className="specialty-card" data-number={`0${index + 1}`} key={name}><h3>{name}</h3><p>{description}</p></article>)}</div></div></section>
+    <section className="section"><div className="container"><div className="section-heading"><div><p className="eyebrow">Local favorites</p><h2>Bold, Traditional Flavors</h2></div><p className="lead">Explore the dishes that bring people to El Toro Loco—from carnitas and barbacoa to weekend favorites and handmade tortillas.</p></div><div className="specialty-grid">{specialties.map((specialty, index) => <article className="specialty-card" key={specialty.name}><div className="specialty-media"><Image src={specialty.image} alt={specialty.imageAlt} fill sizes="(max-width:390px) 100vw, (max-width:1020px) 50vw, 33vw" /></div><div className="specialty-card-content" data-number={`0${index + 1}`}><h3>{specialty.name}</h3><p>{specialty.description}</p></div></article>)}</div></div></section>
 
     <section className="section tortilla-feature"><div className="container tortilla-grid"><div><p className="eyebrow light">Acompaña tu comida</p><h2>Tortillas Hechas a Mano<span>Handmade Tortillas</span></h2><p>Traditional meals deserve a proper tortilla. Ask about our handmade tortillas when you call or visit.</p><ButtonLink href={business.phones[0].href} variant="secondary"><PhoneIcon className="icon" /> Call El Toro Loco</ButtonLink></div><div className="tortilla-visual"><Image src="/images/menu-board.png" alt="El Toro Loco menu board highlighting handmade tortillas" fill sizes="(max-width: 760px) 100vw, 50vw" /></div></div></section>
 
