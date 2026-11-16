@@ -12,7 +12,13 @@ export function Header() {
   const [open, setOpen] = useState(false);
   return (
     <header className="site-header">
-      <div className="announcement"><span>Mexican food in Whittier</span><a href={business.phones[0].href}>{business.phones[0].display}</a></div>
+      <div className="announcement">
+        <span className="announcement-copy">Mexican food in Whittier</span>
+        <div className="announcement-phones">
+          <a href={business.phones[0].href} aria-label={`Tel: ${business.phones[0].display}`}><span className="announcement-label">Tel: </span>{business.phones[0].display}</a>
+          <a href={business.phones[1].href} aria-label={`Cell: ${business.phones[1].display}`}><span className="announcement-label">Cell: </span>{business.phones[1].display}</a>
+        </div>
+      </div>
       <div className="nav-wrap">
         <Link href="/" className="wordmark" aria-label="El Toro Loco Family Restaurant home" onClick={() => setOpen(false)}>
           <Image className="wordmark-logo" src="/images/logo.png" alt="El Toro Loco logo" width={52} height={52} priority />
